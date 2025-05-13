@@ -37,3 +37,11 @@ class OrderSerializer(serializers.ModelSerializer):
     def get_total_price(self, obj):
         order_items = obj.items.all()
         return sum(oi.item_subtotal for oi in order_items)
+
+
+class ProductInfoSerializer(serializers.Serializer):
+    """Get all products, count of proudcts and max price"""
+
+    products = ProductSerializer(many=True)
+    count = serializers.IntegerField()
+    max_price = serializers.FloatField()
