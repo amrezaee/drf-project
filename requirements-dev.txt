@@ -1,0 +1,5 @@
+-r requirements.txt
+autopep8==2.3.2
+django-silk==5.3.2
+gprof2dot==2025.4.14
+pycodestyle==2.13.0
